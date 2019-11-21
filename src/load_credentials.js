@@ -1,7 +1,8 @@
-const fs = require('fs');
+const fs = require("fs");
 
-const loadCredentials = function() { 
-  return fs.readFileSync("./src/credentials.txt", "utf8");
-}; 
+const loadCredentials = function() {
+  const credentials = fs.readFileSync("./src/credentials.JSON", "utf8");
+  return JSON.parse(credentials);
+};
 
 exports.loadCredentials = loadCredentials;

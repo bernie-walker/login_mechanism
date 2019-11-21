@@ -1,15 +1,17 @@
-const loadCredentials = require('./load_credentials.js').loadCredentials;
-const parseCredentials = require('./parse_credentials.js').parseCredentials;
+const loadCredentials = require("./load_credentials.js").loadCredentials;
 
-const loginFunction = function(username, password) { 
-  const credentialTable = parseCredentials(loadCredentials());
+const loginFunction = function(username, password) {
+  const credentialTable = loadCredentials();
   let returnMessage = "wrong username or password!";
 
-  if((credentialTable[username] != undefined) && (credentialTable[username] === password)) {
-    returnMessage = "login Successful"; 
+  if (
+    credentialTable[username] != undefined &&
+    credentialTable[username] === password
+  ) {
+    returnMessage = "login Successful";
   }
 
   return returnMessage;
-}; 
+};
 
 exports.loginFunction = loginFunction;
