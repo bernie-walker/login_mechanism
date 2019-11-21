@@ -1,0 +1,14 @@
+{
+  "name": "login_mechanism",
+  "version": "1.0.0",
+  "description": "Allows user to login and signup",
+  "main": "loginPrompt.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Bernard Nehal D'Cunha & P Nagendra Sai",
+  "license": "ISC"
+}
